@@ -1,0 +1,51 @@
+.home
+    margin-bottom: 50vh
+
+.logo
+    height: 4rem
+    width: 5rem
+    align-self: flex-start
+
+.mainhead
+    background: $header-gradient
+    position: relative
+    min-height: 100vh
+    color: $color-negative
+
+    @supports (clip-path: $sheet)
+        clip-path: $sheet
+        min-height: calc(100vh + 3rem)
+    
+.mainhead_slug
+    position: absolute
+    z-index: 20
+    top: 0
+    left: 0
+    width: 80vw
+    height: 40rem
+    padding: 14rem 26.4vw 0 10rem
+    margin-left: 10vw
+    font-size: 4vmin
+    text-align: center
+ 
+.borealis_background
+    position: absolute
+    top: 1rem
+    right: 0
+    z-index: 10
+    width: 40vw
+    height: 50rem
+
+.mainhead_whatIDo
+    display: flex
+    width: 80vw
+    margin: 0 auto
+    padding-top: 40rem
+    justify-content: space-around
+
+    li
+        padding: 0 2rem
+        max-width: 33rem
+
+    h1
+        @extend h3

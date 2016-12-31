@@ -1,0 +1,45 @@
+@import url('https://webfonts.fontstand.com/WF-014809-4a7792c37bf5c95b6ba4ca9cd338bb11.css')
+
+$system-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+$headline-small: 'Grifo M Bold'
+$headline-large: 'Grifo L Bold Italic'
+$headline-fallback: Georgia, serif
+$rem: 14
+$typeScale: 1.333
+
+html
+    font-family: $system-stack
+    font-size: #{$rem}px
+    font-weight: 100
+    color: $color-positive
+
+p
+    line-height: 1.8
+    margin-bottom: .8em
+
+small
+    font-size: .75rem
+
+strong
+    font-weight: 600
+
+%headlines
+    line-height: 1.5em
+    margin: 2rem 0 1rem
+    font-weight: normal
+    font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased
+
+// Scale our headlines nicely according to our typographic scale
+$_headlineSize: 1
+@for $i from 1 through 5
+    $_headlineSize: $_headlineSize * $typeScale
+    h#{6 - $i}
+        @extend %headlines
+        font-size: #{$_headlineSize}rem
+
+h1
+    font-family: #{$headline-large}, #{$headline-fallback}
+
+h2, h3, h4, h5
+    font-family: #{$headline-small}, #{$headline-fallback}

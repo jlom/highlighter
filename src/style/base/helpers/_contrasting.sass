@@ -1,0 +1,5 @@
+@function contrasting($color, $dark:$color-positive, $light:$color-negative, $rate:50)
+  @if (lightness($color) > $rate)
+    @return $light // Lighter backgorund, return dark color
+  @else
+    @return $dark // Darker background, return light color

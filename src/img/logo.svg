@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="3rem" width="3rem" viewBox="0 0 116 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Highlighter Lom logo</title>
+    <desc>Highlighter er et ettmannstudio for web- og grafisk design, medieproduksjon og kommunikasjonsrådgiving.</desc>
+    <g id="HighlighterLogo" fill="white">
+        <polyline id="TriangleUpperLeft" points="-0.172 0.807 -0.172 58.81 57.831 29.808 -0.172 0.807"></polyline>
+        <polyline id="TriangleLowerLeft" points="-0.172 116.813 57.831 87.811 -0.172 58.81 -0.172 116.813"></polyline>
+        <polyline id="TriangleUpperRight" points="115.834 58.81 115.834 0.807 57.831 29.808 115.834 58.81"></polyline>
+        <polyline id="TriangleLowerRight" points="115.834 116.813 115.834 58.81 57.831 87.811 115.834 116.813"></polyline>
+        <polyline id="highlighterH" points="46.68 66.967 49.312 66.967 49.443 46.837 46.68 46.837 46.68 45.39 54.048 45.39 54.048 46.837 51.285 46.837 51.219 56.244 64.441 56.244 64.508 46.837 61.613 46.837 61.613 45.39 68.981 45.39 68.981 46.837 66.35 46.837 66.218 66.967 68.981 66.967 68.981 68.414 61.613 68.414 61.613 66.967 64.376 66.967 64.441 57.691 51.219 57.691 51.153 66.967 54.048 66.967 54.048 68.414 46.68 68.414 46.68 66.967"></polyline>
+    </g>
+</svg>

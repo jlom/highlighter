@@ -1,0 +1,15 @@
+@function map-get-prev($map, $key, $fallback: false, $return: value)
+  $i: 0
+  $keys: map-keys($map)
+  $vals: map-values($map)
+
+  @each $map-key, $map-value in $map
+    $i: $i + 1
+    @if $map-key == $key
+      @if $i != 1
+        @if $return == key
+          @return nth($keys, ($i - 1))
+        @else
+          @return nth($vals, ($i - 1))
+
+  @return $fallback

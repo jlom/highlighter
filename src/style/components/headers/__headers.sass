@@ -1,0 +1,17 @@
+$sheet: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3rem))
+
+%headers
+    width: 100%
+    padding: 10rem 10vw 5rem 
+    z-index: 10
+    position: relative
+
+@mixin headers($background: $header-gradient)
+    @extend %headers
+    background: $background
+    color: $color-negative
+
+    @supports ( clip-path: $sheet )
+        clip-path: $sheet
+        padding-bottom: 5rem
+        margin-bottom: -3rem

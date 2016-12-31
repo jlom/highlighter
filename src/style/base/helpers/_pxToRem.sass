@@ -1,0 +1,6 @@
+@function pxToRem($size)
+  @if (unit($size))
+    $size: $size / ($size * 0 + 1)
+
+  $remSize: $size / $rem
+  @return #{$remSize}rem 

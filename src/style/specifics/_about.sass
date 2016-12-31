@@ -1,0 +1,61 @@
+.about
+    padding-bottom: 20vh
+
+.about_header
+    @include headers()
+
+    p
+        margin-left: 20rem
+        max-width: 35rem
+
+.about_cv > :not(.about_timeline)
+    width: 100%
+    padding: 2rem 10vw
+
+.about_timeline
+    margin: 3rem
+
+.about_resume li
+    width: 40rem
+    margin: 7rem 0 0 20rem
+    position: relative
+
+    h3
+        margin-bottom: 0
+
+    strong, time
+        margin-top: 0
+        display: inline-block
+
+    strong
+        font-weight: 400
+        margin-right: 1.8rem
+
+    time
+        font-weight: 100
+
+    p:first-of-type
+        margin-top: 1.8rem
+
+    img
+        position: absolute
+        left: -10rem
+        top: 1rem
+        height: 5rem
+
+        @supports (object-fit: contain)
+            width: 5rem
+            object-fit: contain
+            object-position: top center
+
+    aside img
+        height: 3rem
+        top: 0
+
+.about_image
+    position: absolute
+    right: 13.5vw
+    top: 14rem 
+    width: 25rem
+    z-index: 20
+    box-shadow: 0 0 5rem transparentize($color-positive, .5) 

@@ -1,0 +1,64 @@
+{
+  "name": "highlighter",
+  "version": "1.0.0",
+  "description": "Website for Highlighter Lom",
+  "main": "index.js",
+  "watch": {
+    "build-babel": "src/js/{*,**}",
+    "build-css": {
+      "patterns": [
+        "src/style/{*,**}"
+      ],
+      "extensions": "sass"
+    },
+    "build-html": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html,htm"
+    },
+    "build-img": {
+      "patterns": [
+        "src/img"
+      ],
+      "extensions": "jpg,jpeg,png,gif,ico"
+    },
+    "build-svg": {
+      "patterns": [
+        "src/img"
+      ],
+      "extensions": "svg"
+    }
+  },
+  "scripts": {
+    "build-sass": "node-sass src/style/main.sass web/style/main.css --source-map web/style/main.css.map",
+    "build-postcss": "postcss --use autoprefixer --autoprefixer.browsers '> 5%' --use cssnano -o web/style/main.css web/style/main.css --map web/style/main.css.map",
+    "build-css": "npm run build-sass; npm run build-postcss",
+    "build-babel": "babel src -d web --source-maps",
+    "build-html": "cp -f src/index.html web/index.html & cp -f src/about.html web/about.html",
+    "build-img": "imagemin src/img/* --out-dir=web/img",
+    "build-svg": "svgo src/img -o web/img",
+    "build": "npm run clean; npm run build-babel & npm run build-html & npm run build-img & npm run build-svg && npm run build-sass && npm run build-postcss",
+    "serve": "live-server web --watch --wait --browser='Google Chrome Canary'",
+    "clean": "rm -rf web && mkdir web && mkdir web/img",
+    "watch": "npm-watch",
+    "copy-images": "find src/img \\( -name '*.jpg' -o -name '*.jpeg' -o -name '*.png' -o -name '*.gif' -o -name '*.ico' \\) -exec cp {} web/img \\;",
+    "start": "npm run build; npm run serve & npm run watch"
+  },
+  "author": "Jørgen Arnor Gårdsø Lom",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "cssnano": "^3.9.1",
+    "lite-server": "^2.2.2",
+    "node-sass": "^3.13.0",
+    "npm-watch": "^0.1.6",
+    "postcss-cli": "^2.6.0",
+    "svgo": "^0.7.1"
+  },
+  "dependencies": {
+    "fontfaceobserver": "^2.0.7"
+  }
+}

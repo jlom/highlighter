@@ -1,0 +1,550 @@
+{
+  "basics": {
+    "name": "Jørgen Arnor Gårdsø Lom",
+    "label": "Designer and front end developer",
+    "picture": "https://www.gravatar.com/avatar/9bcea0904786a2117b8d0bd5cd4e1743?s=750",
+    "email": "j@lom.me",
+    "phone": "(+47) 955 29 331",
+    "website": "http://lom.me",
+    "summary": "I'm a web- & graphic designer, and front end application developer. I have a passion for front-end usability and accessability design, and I love typography, both in print and on screen. \n I have a background in broadcast television, and a keen interest in media, new and old.",
+    "location": {
+        "address": "Nøstegaten 85",
+        "postalCode": "5011",
+        "city": "Bergen",
+        "countryCode": "No",
+        "region": "Hordaland"
+    },
+    "profiles": [
+        {
+            "network": "Twitter",
+            "username": "lommelom",
+            "url": "http://twitter.com/lommelom"
+        },
+        {
+            "network": "GitHub",
+            "username": "jlom",
+            "url": "http://github.com/jlom"
+        },
+        {
+            "network": "LinkedIn",
+            "username": "arnorlom",
+            "url": "https://linkedin.com/in/arnorlom"
+        }
+    ]
+  },
+  "work": [
+    {
+        "company": "Uni Micro AS",
+        "position": "Senior web designer",
+        "website": "http://unimicro.no",
+        "startDate": "2015-05-01",
+        "summary": "Responsible for visual design, usability, accessibility, UX and IA for Uni Micro's six-years-in-a-row award winning ERP and accounting systems. \n Heading up work on our human interface guidelines, user testing, and pattern- and component libraries, as well as doing front-end development on our web products. \n Working Agile across disciplines in both the Adobe CC suite, Sketch, InVision, as well as front-end development using HTML, Sass, and JavaScript, using TypeScript and both Angular 1 and 2.",
+        "highlights": [
+            "Initiated our user testing program",
+            "Expanded a11y-focus on the web"
+        ],
+        "category": "design",
+        "lane": 1
+    },
+    {
+        "company":  "Highlighter Lom",
+        "position": "Managing director",
+        "website": "http://highlighter.no",
+        "startDate": "2011-01-01",
+        "summary": "Managing director at Highlighter, a one-man design studio specialising in web and graphic design, communications consultancy and media production.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Wolftech Broadcast Solutions",
+        "position": "Sr. VP, Design and marketing",
+        "website": "http://wolftech.no",
+        "startDate": "2013-01-01",
+        "endDate": "2015-03-31",
+        "summary": "Web front end developer, UX designer, and director of profile and external marketing for Wolftech Broadcast Solutions. \n Wrote the Wolftech Style Guide and Human Interface Guidelines, the Wolftech.no web site, as well as working as the lead front end developer on most of the Wolftech web interfaces, including the Wolftech EventCaster and Wolftech News systems.",
+        "category": "media",
+        "lane": 1
+    },
+    {
+        "company":  "TV 2",
+        "position": "Administrator",
+        "website": "http://tv2.no",
+        "startDate": "2015-03-31",
+        "endDate": "2015-05-01",
+        "summary": "Front desk, switch board operation, audience relations, access control, invoice verification and managing incoming news tips.",
+        "category": "media",
+        "lane": 1
+    },
+    {
+        "company":  "TV 2",
+        "position": "Administrator",
+        "website": "http://tv2.no",
+        "startDate": "2010-11-01",
+        "endDate": "2013-01-31",
+        "summary": "Front desk, switch board operation, audience relations, access control, invoice verification and managing incoming news tips.",
+        "category": "media",
+        "lane": 2
+    },
+    {
+        "company":  "Hermes Dialog AS",
+        "position": "Switchboard Operator",
+        "startDate": "2010-03-01",
+        "endDate": "2010-10-31",
+        "summary": "Switchboard operator, customer support and 1st line IT support for Hermes Dialog, Telekiosken, Nordialog, Mobildata, Kjedehuset, Mamoz, Abbo.no, AR Data, Timeflex Systems and Primehead.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Jobbdirekte.no",
+        "position": "Sales Consultant",
+        "startDate": "2009-12-01",
+        "endDate": "2010-02-31",
+        "summary": "Sales representative for Norway's second largest commercial job board.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company": "OISH AS",
+        "position": "Marketing consultant",
+        "startDate": "2009-03-01",
+        "endDate": "2009-09-01",
+        "summary": "Design- and marketing consultant for Offshore Service Hydraulikk",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Meny Oslo City",
+        "position": "Checkout Employee",
+        "website": "http://meny.no",
+        "startDate": "2008-12-01",
+        "endDate": "2009-11-30",
+        "summary": "Check-in and check-out of guests, bartendering, balancing the cash for bar and reception, night runs, preparation of meeting rooms and the hotel for the next day, fire and safety rounds.",
+        "category": "service",
+        "lane": 4
+    },
+    {
+        "company":  "Spa-hotell Velvære",
+        "position": "Hotel Receptionist",
+        "website": "http://hjelmelandspa.no",
+        "startDate": "2009-06-15",
+        "endDate": "2009-09-15",
+        "summary": "Check-in and check-out of guests, bartendering, balancing the cash for bar and reception, night runs, preparation of meeting rooms and the hotel for the next day, fire and safety rounds.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Dugg Frisører",
+        "position": "Assistant",
+        "website": "http://dugg.no",
+        "startDate": "2009-01-01",
+        "endDate": "2009-06-15",
+        "summary": "Customer service, booking, ordering and miscellaneous for one of Oslo’s highest-end hair dressers.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Spa-hotell Velvære",
+        "position": "Hotel Receptionist",
+        "website": "http://hjelmelandspa.no",
+        "startDate": "2008-06-15",
+        "endDate": "2008-09-15",
+        "summary": "Check-in and check-out of guests, bartendering, balancing the cash for bar and reception, night runs, preparation of meeting rooms and the hotel for the next day, fire and safety rounds.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Rom for mer",
+        "position": "Sales Consultant",
+        "startDate": "2006-11-01",
+        "endDate": "2007-08-31",
+        "summary": "Customer care and sales promotion for the interior design department at Rom for mer, one of Stavanger's leading design shops, with a special focus on Scandinavian design.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Spinneriet",
+        "position": "Art Gallerist",
+        "startDate": "2006-06-01",
+        "endDate": "2006-08-15",
+        "summary": "Guide, sales consultant, artist contact and cafe staff member for Spinneriet’s annual summer exhibition. The sales exhibition has a particular focus on local crafts and visual arts, in an old, historic spinning mill in Ryfylke.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Spinneriet Summer Exhibition",
+        "position": "Exhibitor",
+        "startDate": "2006-06-01",
+        "endDate": "2006-08-15",
+        "summary": "Art exhibitor of photographic art works under the summer art exhibition at Spinneriet art gallery.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Ryfylkeutstillingen",
+        "position": "Exhibitor",
+        "startDate": "2006-08-15",
+        "endDate": "2006-12-15",
+        "summary": "Art exhibitor of photographic art works under the prestigious Ryfylkeutstillingen 2006.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Halliburton",
+        "position": "Event Photographer",
+        "startDate": "2005-12-31",
+        "endDate": "2005-12-01",
+        "summary": "Event photographer for Halliburton and ConocoPhillips’ annual Christmas party.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Gallery W. Andersen",
+        "position": "Exhibitor",
+        "startDate": "2005-09-15",
+        "endDate": "2005-12-25",
+        "summary": "Art exhibitor of photographic works at Gallery Wenche Andersen at the center Stavanger's old town.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Rogaland County Charity Event",
+        "position": "Exhibitor",
+        "startDate": "2005-08-15",
+        "endDate": "2005-09-15",
+        "summary": "Art exhibitor of photographic works at Rogaland County's charity exhibition, to benefit charities in Bolivia.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "The Other Life",
+        "position": "Exhibitor",
+        "startDate": "2005-02-15",
+        "endDate": "2005-03-15",
+        "summary": "Independent art exhibition of photographic installation.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Spinneriet",
+        "position": "Art Gallerist",
+        "startDate": "2005-06-01",
+        "endDate": "2005-08-15",
+        "summary": "Guide, sales consultant, artist contact and cafe staff member for Spinneriet’s annual summer exhibition. The sales exhibition has a particular focus on local crafts and visual arts, in an old, historic spinning mill in Ryfylke.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Halliburton",
+        "position": "Event Photographer",
+        "startDate": "2004-12-31",
+        "endDate": "2004-12-01",
+        "summary": "Event photographer for Halliburton and ConocoPhillips’ annual Christmas party.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "City of Stavanger",
+        "position": "Exhibitor",
+        "startDate": "2004-07-15",
+        "endDate": "2004-09-01",
+        "summary": "Art exhibitor of photographic works for the City of Stavanger.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "City of Stavanger",
+        "position": "Graphic Designer",
+        "startDate": "2003-06-31",
+        "endDate": "2003-05-01",
+        "summary": "Graphic design work for the Stavanger Municipality Detached Outreach Service.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Spinneriet",
+        "position": "Art Gallerist",
+        "startDate": "2004-06-01",
+        "endDate": "2004-08-15",
+        "summary": "Guide, sales consultant, artist contact and cafe staff member for Spinneriet’s annual summer exhibition. The sales exhibition has a particular focus on local crafts and visual arts, in an old, historic spinning mill in Ryfylke.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "City of Stavanger",
+        "position": "Graphic Designer",
+        "startDate": "2003-06-31",
+        "endDate": "2003-05-01",
+        "summary": "Graphic design work for the Stavanger Municipality Detached Outreach Service.",
+        "category": "design",
+        "lane": 0
+    },
+    {
+        "company":  "Spinneriet",
+        "position": "Art Gallerist",
+        "startDate": "2003-06-01",
+        "endDate": "2003-08-15",
+        "summary": "Guide, sales consultant, artist contact and cafe staff member for Spinneriet’s annual summer exhibition. The sales exhibition has a particular focus on local crafts and visual arts, in an old, historic spinning mill in Ryfylke.",
+        "category": "service",
+        "lane": 3
+    },
+    {
+        "company":  "Bygdaposten for Hjelmeland",
+        "position": "Journalist",
+        "startDate": "2001-08-01",
+        "endDate": "2004-06-30",
+        "summary": "Journalist and photographer for the print edition of the Bygdaposten newspaper.",
+        "category": "media",
+        "lane": 2
+    }
+  ],
+  "volunteer": [
+    {
+        "organization": "Norwegian Red Cross",
+        "position": "Homework Assistant",
+        "website": "https://www.rodekors.no/red-cross-in-english/",
+        "startDate": "2010-02-01",
+        "endDate": "2010-03-01",
+        "summary": "Homework assistant for grade five to seven"
+    },
+    {
+        "organization": "Bergenhus Venstre",
+        "position": "Board Member",
+        "website": "http://venstre.no",
+        "startDate": "2013-08-01",
+        "endDate": "2014-08-01",
+        "summary": "Board member for the Bergenhus local division of the The Liberal Party of Norway."
+    },
+    {
+        "organization": "Åsane Venstre",
+        "position": "Board Member",
+        "website": "http://venstre.no",
+        "startDate": "2011-08-01",
+        "endDate": "2012-08-01",
+        "summary": "Board member for the Åsane local division of the The Liberal Party of Norway."
+    },
+    {
+        "organization": "Bergen Unge Venstre",
+        "position": "Substitute Board Member",
+        "website": "http://venstre.no",
+        "startDate": "2011-08-01",
+        "endDate": "2012-08-01",
+        "summary": "Substitute board member for the Åsane local division of the Young Liberals of Norway."
+    },
+    {
+        "organization": "Stavanger og Sola KrFU",
+        "position": "Board member",
+        "website": "http://krfu.no",
+        "startDate": "2007-08-01",
+        "endDate": "2008-08-01",
+        "summary": "Board member for the Stavanger and Sola local division of the Young Christian Democrats of Norway."
+    },
+    {
+        "organization": "Kristelig Folkeparti",
+        "position": "Member, electoral comittee for the Rogaland county elections",
+        "website": "http://krfu.no",
+        "startDate": "2006-08-01",
+        "endDate": "2007-01-15",
+        "summary": "Member of the electoral comittee for the Christian Democrats of Norway."
+    },
+    {
+        "organization": "Stavanger og Sola KrFU",
+        "position": "Vice Chair",
+        "website": "http://krfu.no",
+        "startDate": "2006-08-01",
+        "endDate": "2007-08-01",
+        "summary": "Vice chairman of the board for the Stavanger and Sola local division of the Young Christian Democrats of Norway."
+    },
+    {
+        "organization": "Forus Videregående skole",
+        "position": "Student Representative",
+        "startDate": "2005-08-01",
+        "endDate": "2006-06-30",
+        "summary": "Student representative on the board for Forus High school."
+    },
+    {
+        "organization": "Rogaland County",
+        "position": "Member, Central School Comittee",
+        "startDate": "2004-08-01",
+        "endDate": "2005-06-30",
+        "summary": "Student representative on the central school board for Rogaland county, representing Forus High school."
+    }
+  ],
+  "education": [
+    {
+        "institution": "Red Cross",
+        "area": "Introduction to the use of defibrillators",
+        "studyType": "Course",
+        "startDate": "2016-04-14",
+        "endDate": "2016-04-14"
+    },
+    {
+        "institution": "TV 2 Green Card-course",
+        "area": "Media law and ethics",
+        "studyType": "Course",
+        "startDate": "2014-05-06",
+        "endDate": "2014-05-06"
+    },
+    {
+        "institution": "Bergen Fire Department",
+        "area": "Fire protection and safety",
+        "studyType": "Course",
+        "startDate": "2012-03-28",
+        "endDate": "2012-03-28"
+    },
+    {
+        "institution": "University of Bergen",
+        "area": "New media",
+        "studyType": "Bachelor (not completed)",
+        "startDate": "2010-08-01",
+        "endDate": "2011-12-31"
+    },
+    {
+        "institution": "University of Tromsø",
+        "area": "Social anthropology",
+        "studyType": "Bachelor (not completed)",
+        "startDate": "2007-08-01",
+        "endDate": "2008-12-31"
+    },
+    {
+        "institution": "Randaberg videregående skole",
+        "area": "Media and communication studies",
+        "studyType": "High school equivalent",
+        "startDate": "2004-08-01",
+        "endDate": "2007-06-30"
+    },
+    {
+        "institution": "Hjelmeland Ungdomsskole",
+        "area": "Jr. High School Equivalent",
+        "studyType": "Jr. High school equivalent",
+        "startDate": "2001-08-01",
+        "endDate": "2004-06-30"
+    }
+  ],
+  "skills": [
+    {
+        "name": "Front-end Web Development",
+        "level": "Expert",
+        "keywords": [
+            "HTML",
+            "CSS",
+            "Sass",
+            "Javascript",
+            "TypeScript",
+            "Web standards",
+            "Accessibility",
+            "Responsive web design",
+            "Progressive web apps",
+            "Angular.js",
+            "Angular 2",
+            "Knockout.js"
+        ]
+    },
+    {
+        "name": "Design",
+        "level": "Expert",
+        "keywords": [
+            "Usability",
+            "User experience design",
+            "User interface design",
+            "Motion design",
+            "Typography",
+            "User testing",
+            "User research",
+            "Sketch",
+            "Viz Artist",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe InDesign",
+            "Keynote",
+            "Pen and paper"
+        ]
+    },
+    {
+        "name": "Media",
+        "level": "Expert",
+        "keywords": [
+            "Digital video",
+            "Streaming media",
+            "Avid iNEWS",
+            "MOS",
+            "NRCS",
+            "Aerial cinematography",
+            "Journalism",
+            "Social media"
+        ]
+    },
+    {
+        "name": "Project Management",
+        "level": "Good",
+        "keywords": [
+            "Agile",
+            "Scrum",
+            "ITIL",
+            "FogBugz",
+            "Atlassian",
+            "Version One",
+            "GitHub",
+            "Client relations",
+            "Developer relations"
+        ]
+    },
+    {
+        "name": "Back-end Developent",
+        "level": "Good",
+        "keywords": [
+            "RESTful APIs",
+            "Node.js",
+            "Express",
+            "Passport",
+            "MongoDB",
+            "WebHooks",
+            "WebSockets",
+            "oAuth",
+            "Identity Server",
+            "SQL",
+            "PHP"
+        ]
+    }
+  ],
+  "languages": [
+    {
+        "language": "Norwegian",
+        "fluency": "Native speaker"
+    },
+    {
+        "language": "English",
+        "fluency": "Full professional fluency"
+    }
+  ],
+  "interests": [
+    {
+        "name": "Technology",
+        "keywords": [
+            "Apple",
+            "Drones",
+            "Gadgets",
+            "VR",
+            "Media"
+        ]
+    },
+    {
+        "name": "Politics",
+        "keywords": [
+            "Privacy",
+            "Immigration and integration",
+            "Finance and innovation",
+            "Diversity"
+        ]
+    },
+    {
+        "name": "Media",
+        "keywords": [
+            "Real-time media",
+            "User-generated content",
+            "Multimedial storytelling",
+            "Language",
+            "Emoji and animated gifs 🤘"
+        ]
+    }
+  ]
+}

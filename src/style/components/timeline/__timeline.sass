@@ -1,0 +1,61 @@
+.about_timeline
+    padding: 0
+    position: relative
+    
+    figcaption
+        float: right
+        margin: 1rem 0
+        min-height: 1rem
+        min-width: 1rem
+        opacity: 0
+        transition: opacity 300ms ease
+
+    &:hover figcaption
+        opacity: 1
+
+        
+.timeline
+    margin: 0
+
+.timeline_chart
+    height: pxToRem(115)
+
+#diagonalHatch
+    path
+        stroke: $grey-scale3
+        stroke-width: pxToRem(1)
+
+.timeline_tickLine
+    stroke: $grey-scale4
+    stroke-width: 1px
+
+.timeline_tickLabel
+    @extend small
+    text-anchor: middle
+    fill: $grey-scale3
+
+.timeline_item
+    fill: #3ea
+    height: pxToRem(5)
+    animation: 900ms fadeInLeft 
+    min-width: 100px
+    transition: transform 300ms ease
+    transform-origin: center
+    stroke: transparent
+    stroke-width: 10px
+
+    &.design
+        fill: $color-scale4
+    &.media
+        fill: $color-scale3
+    &.service
+        fill: url(#diagonalHatch)
+        stroke: $grey-scale3
+        stroke-width: pxToRem(1)
+
+    &.education
+        fill: $color-scale1
+        // fill: $color-positive
+
+    &:hover
+        transform: scaleY(2) scaleX(1.05)

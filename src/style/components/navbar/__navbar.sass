@@ -1,0 +1,40 @@
+.mainnav
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 90
+    background: transparentize($color-positive, .1)
+    height: 6rem
+    display: flex
+    padding: .7rem 10vw
+    justify-content: space-between
+
+    @supports (-webkit-backdrop-filter: blur(1rem))
+        background: transparentize($color-positive, .3)
+        -webkit-backdrop-filter: blur(1rem)
+
+    @supports (clip-path: $sheet)
+        clip-path: $sheet
+        height: 8rem
+
+    ul
+        list-style: none
+        display: flex
+        height: 4rem
+        align-items: center
+
+    li
+        font-weight: 700
+        margin-left: 3rem
+
+
+    a:link,
+    a:visited
+        color: $color-negative
+        text-decoration: none
+
+    a:hover,
+    a:focus,
+    a:active
+        border-bottom: pxToRem(2) solid $color-negative

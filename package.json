@@ -15,7 +15,7 @@
       "patterns": [
         "src"
       ],
-      "extensions": "html,htm"
+      "extensions": "ejs"
     },
     "build-img": {
       "patterns": [
@@ -35,15 +35,16 @@
     "build-postcss": "postcss --use autoprefixer --autoprefixer.browsers '> 5%' --use cssnano -o web/style/main.css web/style/main.css --map web/style/main.css.map",
     "build-css": "npm run build-sass; npm run build-postcss",
     "build-babel": "babel src -d web --source-maps",
-    "build-html": "cp -f src/index.html web/index.html & cp -f src/about.html web/about.html",
+    "build-html": "ejs-cli --base-dir src/ '*.ejs' --out web/",
     "build-img": "imagemin src/img/* --out-dir=web/img",
     "build-svg": "svgo src/img -o web/img",
-    "build": "npm run clean; npm run build-babel & npm run build-html & npm run build-img & npm run build-svg && npm run build-sass && npm run build-postcss",
+    "build-txt": "find src/ \\( -name '*.txt' \\) -exec cp {} web/ \\;",
+    "build": "npm run clean; npm run build-babel & npm run build-html & npm run build-img & npm run build-svg & npm run build-txt && npm run build-sass && npm run build-postcss",
     "serve": "live-server web --watch --wait --browser='Google Chrome Canary'",
-    "clean": "rm -rf web && mkdir web && mkdir web/img",
+    "clean": "rm -rf web; mkdir -p web/img",
     "watch": "npm-watch",
-    "copy-images": "find src/img \\( -name '*.jpg' -o -name '*.jpeg' -o -name '*.png' -o -name '*.gif' -o -name '*.ico' \\) -exec cp {} web/img \\;",
-    "start": "npm run build; npm run serve & npm run watch"
+    "start": "npm run build; npm run serve & npm run watch",
+    "postinstall": "npm i -g imagemin-cli ejs-cli"
   },
   "author": "Jørgen Arnor Gårdsø Lom",
   "license": "CC-BY-4.0",
@@ -51,7 +52,9 @@
     "autoprefixer": "^6.5.4",
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
+    "babili": "0.0.9",
     "cssnano": "^3.9.1",
+    "ejs-cli": "^2.0.0",
     "lite-server": "^2.2.2",
     "node-sass": "^3.13.0",
     "npm-watch": "^0.1.6",

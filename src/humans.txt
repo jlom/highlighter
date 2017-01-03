@@ -1,0 +1,18 @@
+Hi,
+I'm Jørgen Arnor Gårdsø Lom. I made this.
+
+From:       Bergen, Norway
+
+Twitter:    @lommelom (Norwegian)
+            @arnor (English, rarely updated)
+
+Github:     jlom
+LinkedIn:   https://no.linkedin.com/in/arnorlom
+
+
+/* SITE */
+Last updated: 2017
+Standards: HTML, CSS, ECMAScript
+Components: Sass, Babel, Autoprefixer, EJS
+Software: VSCode, Git, NPM
+Hardware: Apple MacBook Pro

@@ -1,34 +1,10 @@
-<!doctype html>
-<html>
-
-<head>
-    <title>Highlighter</title>
-
-    <meta charset="utf8">
-
-    <link rel="stylesheet" href="style/main.css" />
-</head>
-
-<body class="about">
-
-    <nav class="mainnav">
-        <a href="index.html" title="Ta meg hjem">
-            <img src="img/logo.svg" alt="Highlighter Logo" class="logo" />
-        </a>
-
-        <ul>
-            <li><a href="about.html">Om Arnor</a></li>
-            <li><a href="#">Arbeider</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-
-    </nav>
+<%- include('templates/header') %>
 
     <img src="img/jl.jpg" alt="Bilde av Jørgen Arnor" class="about_image">
-    
+
     <header class="about_header">
         <h2>Jørgen Arnor Gårdsø Lom</h2>
-        <p> Jeg er en web- og grafisk designer, med bakgrunn fra mediebransjen. Ved siden av Highlighter, jobber jeg som UX-designer hos Uni Micro AS, hvor jeg er del av et fantastisk team som lager verdens beste økonomisystem.</p> 
+        <p> Jeg er en web- og grafisk designer, med bakgrunn fra mediebransjen. Ved siden av Highlighter, jobber jeg som UX-designer hos Uni Micro AS, hvor jeg er del av et fantastisk team som lager verdens beste økonomisystem.</p>
         <p>Du finner meg som regel i krysningspunktet mellom media, design og brukervennlighet.</p>
     </header>
 
@@ -72,10 +48,5 @@
         </ol>
 
     </article>
-    
-    <script src="http://cdn.polyfill.io/v1/polyfill.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="js/app.js"></script>
-</body>
 
-</html>
+<%- include('templates/footer') %>

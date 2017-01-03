@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="no-nb">
-    <head>
-
-         <!-- Vital defining of the page -->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="chrome=1" /> <!-- Triggers Chrome Frame in IE -->
-        <meta name="robots" content="noindex, nofollow"> <!-- Don't index or follow the page under development. DELETE BEFORE PUBLISHING! -->
-
-        <!--[if (gt IE 9)|!(IE)]><!--> <base href="#" /> <!--<![endif]-->
-        <title> Highlighter / Jørgen Arnor G. Lom </title>
-
-
-        <!-- Stylesheets -->
-
-        <link rel="stylesheet" href="style/main.css" />
-
-    </head>
-    <body class="home">
-
-    <nav class="mainnav">
-        <a href="index.html" title="Ta meg hjem">
-            <img src="img/logo.svg" alt="Highlighter Logo" class="logo" />
-        </a>
-
-        <ul>
-            <li><a href="about.html">Om Arnor</a></li>
-            <li><a href="#">Arbeider</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-
-    </nav>
-
+<%- include('templates/header') %>
 
     <header class="mainhead">
 
@@ -46,6 +14,7 @@
                     <stop class="borealis_light_end" offset="100%" stop-opacity="0" />
                 </linearGradient>
             </defs>
+
             <g class="borealis">
                 <rect width="14" rx="7" class="borealis_ray ray1"></rect>
                 <rect width="14" rx="7" class="borealis_ray ray2"></rect>
@@ -127,35 +96,33 @@
 
 
         <ul class="mainhead_whatIDo">
-        
+
             <li>   <h1>Webdesign</h1>
 
         	       <p>For meg er en god nettside en som jeg slipper &aring; vente p&aring; at skal laste, og som gj&oslash;r det enkelt for meg &aring; finne informasjonen jeg trenger for &aring; gj&oslash;re et kj&oslash;p. Jeg tror dine kunder mener det samme.</p>
-        	           	   
+
         	       <p>Jeg lager nettsider som er effektive. Nettsider som du, dine kunder, og s&oslash;kemotorene liker &aring; bruke.</p>
             </li>
-            
-            
+
+
             <li>   <h1>Grafisk design</h1>
-	   
+
         	       <p>Fra visittkort til bannere &ndash; hvordan trykksakene dine er utformet forteller nye og potensielle kunder mer enn du aner om bedriften din. Jeg liker &aring; s&oslash;rge for at de blir fortalt de rette tingene.</p>
-        	   
+
         	       <p>Jeg kan hjelpe med alt fra brosjyrer til helt ny logo og profilmanual.</p>
             </li>
-            
-            
+
+
             <li>   <h1>Kommunikasjon</h1>
-	   
+
         	       <p>Hva vil det egentlig si &aring; v&aelig;re venn med kundene dine p&aring; Facebook? Snakker alle i bedriften din med samme stemme utad? Og er det den stemmen kundene dine trenger &aring; h&oslash;re?</p>
-        	       
+
         	       <p>Svaret p&aring; disse sp&oslash;rsm&aring;lene er ikke alltid innlysende, s&aring; la oss belyse dem sammen.</p>
             </li>
-        
+
         </ul>
 
 
     </header>
 
-    </body>
-
-</html>
+<%- include('templates/footer') %>

@@ -2,6 +2,14 @@
   "name": "highlighter",
   "version": "1.0.0",
   "description": "Website for Highlighter Lom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlom/highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlom/highlighter/issues"
+  },
+  "homepage": "https://github.com/jlom/highlighter", 
   "main": "index.js",
   "watch": {
     "build-babel": "src/js/{*,**}",
@@ -46,6 +54,7 @@
     "start": "npm run build; npm run serve & npm run watch",
     "postinstall": "npm i -g imagemin-cli ejs-cli"
   },
+  "os" : [ "darwin", "linux" ],
   "author": "Jørgen Arnor Gårdsø Lom",
   "license": "CC-BY-4.0",
   "devDependencies": {

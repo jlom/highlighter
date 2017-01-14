@@ -3,7 +3,7 @@
     top: 0
     left: 0
     right: 0
-    z-index: 90
+    z-index: z(navbar)
     background: transparentize($color-positive, .1)
     height: 6rem
     display: flex
@@ -17,6 +17,11 @@
     @supports (clip-path: $sheet)
         clip-path: $sheet
         height: 8rem
+
+    .logo
+        height: 4rem
+        width: 5rem
+        align-self: flex-start
 
     ul
         list-style: none

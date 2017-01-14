@@ -1,0 +1,22 @@
+// This is a super simple, opinionated and limited media query generator.
+// This probably isn't useful if you're not me.
+
+
+// Our breakpoints, from smallest to largest.
+// Why EM? Good rundown on https://zellwk.com/blog/media-query-units/
+$viewport-sizes: ('small': '0', 'medium': '50em', 'large': '80em', 'huge': '140em')
+
+@mixin media($size)
+    // If we're on the last and largest breakpoint, it should be treated as min-width only.
+    @if map-index($viewport-sizes, $size) == length($viewport-sizes)
+        @media only screen and (min-width: #{map-get($viewport-sizes, $size)})
+            @content
+
+    // If not, lets make a media query between the selected breakpoint, and the next one.
+    @else if map-has-key($viewport-sizes, $size)
+        @media only screen and (min-width: #{map-get($viewport-sizes, $size)}) and (max-width: #{map-get-next($viewport-sizes, $size)})
+            @content
+
+    // If all else fails, break down and cry.
+    @else
+        @error 'There is no viewport size named #{$size}'

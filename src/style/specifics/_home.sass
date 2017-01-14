@@ -1,24 +1,19 @@
 .home
     margin-bottom: 50vh
 
-.logo
-    height: 4rem
-    width: 5rem
-    align-self: flex-start
-
 .mainhead
-    background: $header-gradient
-    position: relative
+    @extend %headers
     min-height: 100vh
     color: $color-negative
 
     @supports (clip-path: $sheet)
         clip-path: $sheet
         min-height: calc(100vh + 3rem)
+        padding-bottom: 5rem
     
 .mainhead_slug
     position: absolute
-    z-index: 20
+    z-index: z(header)
     top: 0
     left: 0
     width: 80vw
@@ -27,14 +22,25 @@
     margin-left: 10vw
     font-size: 4vmin
     text-align: center
+
+    @include media(small)
+        font-size: 5vmin
+        padding: 14rem 1rem 0
+        text-shadow: 0 0 1rem transparentize($color-positive, .5)
  
 .borealis_background
     position: absolute
     top: 1rem
-    right: 0
-    z-index: 10
+    left: 60vw
     width: 40vw
-    height: 50rem
+    height: 40rem
+    z-index: z(base)
+    overflow: visible
+
+    @include media(small)
+        width: 100vmin
+        height: 100vmin
+        left: 0
 
 .mainhead_whatIDo
     display: flex
@@ -49,3 +55,6 @@
 
     h1
         @extend h3
+
+    @include media(small)
+        display: block

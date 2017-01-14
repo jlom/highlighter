@@ -1,0 +1,4 @@
+$z-index: ('base': 10, 'header': 20, 'navbar': 30)
+
+@function z($index)
+    @return map-get($z-index, $index)

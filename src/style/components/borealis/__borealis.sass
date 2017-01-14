@@ -1,6 +1,3 @@
-.borealis_background
-    font-size: $rem // because Safari doesn't allow rem coord values on SVGs
-
 .borealis_light_start
     stop-color: $color-scale3
 
@@ -9,22 +6,27 @@
     stop-color: $color-scale4
 
 .borealis_ray
-    height: 20rem
+    height: 75px
     fill: url(#borealis_light)
     animation-iteration-count: infinite
     animation-timing-function: linear 
     animation-direction: alternate
 
+rect.test
+    x: 0
+    y: 0
+    background: cyan
+
 @for $i from 1 through 75
 
     @keyframes ray_movement_#{$i}
         0%
-            transform: translateX(#{pxToRem(100 - random(200))}) translateY(#{pxToRem(50 - random(100))}) rotate(5deg)
+            transform: translateX(#{25 - random(50)}px) translateY(#{10 - random(20)}px) rotate(5deg)
         100%
-            transform: translateX(#{pxToRem(150 - random(300))}) translateY(#{pxToRem(50 - random(100))}) rotate(5deg)
+            transform: translateX(#{25 - random(50)}px) translateY(#{10 - random(20)}px) rotate(5deg)
 
     .ray#{$i}
-        x: #{(250 + random(200)) / $rem}em
-        y: #{(50 + random(100)) / $rem}em
+        x: #{25 + random(50)}px
+        y: #{10 + random(10)}px
         animation-duration: #{10000 + random(5000)}ms 
         animation-name: ray_movement_#{$i}

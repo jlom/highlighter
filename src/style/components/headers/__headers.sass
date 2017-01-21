@@ -5,11 +5,11 @@ $sheet: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3vmin))
     padding: 10rem 10vw 5rem 
     z-index: z(base)
     position: relative
-    background: $background
+    background: $header-gradient
 
-@mixin headers($background)
+@mixin headers($background: false)
     @extend %headers
-    @if $background
+    @if $background != false
         background: $background
     color: $color-negative
 

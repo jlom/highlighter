@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/jlom/highlighter/issues"
   },
-  "homepage": "https://github.com/jlom/highlighter", 
+  "homepage": "https://github.com/jlom/highlighter",
   "main": "index.js",
   "watch": {
     "build-babel": "src/js/{*,**}",
@@ -52,7 +52,7 @@
     "clean": "rm -rf web; mkdir -p web/img",
     "watch": "npm-watch",
     "start": "npm run build; npm run serve & npm run watch",
-    "postinstall": "npm i -g imagemin-cli ejs-cli"
+    "postinstall": "npm i -g imagemin-cli ejs-cli svgo postcss npm-watch babel cssnano"
   },
   "os" : [ "darwin", "linux" ],
   "author": "Jørgen Arnor Gårdsø Lom",

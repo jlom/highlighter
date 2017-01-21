@@ -22,17 +22,17 @@
 
 #diagonalHatch
     path
-        stroke: $grey-scale3
+        stroke: $color-grey-scale3
         stroke-width: pxToRem(1)
 
 .timeline_tickLine
-    stroke: $grey-scale4
+    stroke: $color-grey-scale4
     stroke-width: 1px
 
 .timeline_tickLabel
     @extend small
     text-anchor: middle
-    fill: $grey-scale3
+    fill: $color-grey-scale3
 
 .timeline_item
     fill: #3ea
@@ -45,16 +45,16 @@
     stroke-width: 10px
 
     &.design
-        fill: $color-scale4
+        fill: $color-secondary
     &.media
-        fill: $color-scale3
+        fill: $color-tertiary
     &.service
         fill: url(#diagonalHatch)
-        stroke: $grey-scale3
-        stroke-width: pxToRem(1)
+        stroke: $color-grey-scale3
+        stroke-width: #{1 / $rem}em
 
     &.education
-        fill: $color-scale1
+        fill: $color-grey-scale2
         // fill: $color-positive
 
     &:hover

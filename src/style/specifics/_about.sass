@@ -3,21 +3,25 @@
 
 .about_header
     @include headers()
+    padding-bottom: 7vmin
 
     p
         margin-left: 20rem
         max-width: 35rem
 
-.about_cv > :not(.about_timeline)
-    width: 100%
-    padding: 2rem 10vw
+.about_cv h2
+    @extend %hideText 
+
+.about_resume
+    margin-left: 10vw
 
 .about_timeline
     padding: 3rem
+    margin: 5rem 0
 
 .about_resume li
     width: 40rem
-    margin: 7rem 0 0 20rem
+    margin: 0 0 0 20rem
     position: relative
 
     h3
@@ -51,6 +55,35 @@
     aside img
         height: 3rem
         top: 0
+
+.about_location
+    float: right
+    margin: 0 10vw 0 0
+    height: 50rem
+    width: calc(80vw - 80rem)
+    min-width: 30rem
+    position: relative
+    background: $color-grey-scale4
+    padding: 0 2rem
+
+    p
+        max-width: 25rem
+
+    .map
+        position: absolute
+        bottom: 1rem
+        right: 1rem
+        height: 30rem
+        width: 100%
+        background-image: url('../img/norway.png')
+        background-size: auto calc(100% - 2rem)
+        background-repeat: no-repeat
+        background-position: right 2rem bottom 2rem
+
+        canvas
+            margin-top: calc(30rem - #{pxToRem(200)})
+            margin-left: calc(100% - #{pxToRem(200)})
+
 
 .about_image
     position: absolute

@@ -129,3 +129,67 @@ function addResumePoints() {
             })
     }
 }
+
+
+
+function makeGlobe(){
+    let render = () => {
+        if(!mesh) return;
+        mesh.rotation.y = 4.2 + scrollRotation;
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+
+    let sceneGen = (texture) => {
+        scene.add(new THREE.AmbientLight(0x999999));
+        let light = new THREE.DirectionalLight(0xbbbbbb, .8);
+        light.position.set(5,3,5);
+        scene.add(light);
+
+       
+
+        let geometry = new THREE.SphereGeometry(3, 30, 30);
+        let material = new THREE.MeshPhongMaterial({ map: texture });
+        mesh = new THREE.Mesh( geometry, material );
+
+        mesh.rotation.x = .85;
+        scene.add( mesh );
+        render();
+    }
+
+    let setScrollRotation = () => {
+        let elemtop = elem.getBoundingClientRect().top;
+        if(elemtop >= 0 && elemtop <= window.innerHeight){
+            scrollRotation = elemtop / 1000;
+        }else{
+            scrollRotation = 0
+        }
+    }
+
+    let height = 200,
+        width = height,
+        elem = document.getElementsByClassName('map')[0],
+        scrollRotation = 0,
+        mesh, rotationOffset; 
+
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera( 75, height / width);
+
+    let renderer = new THREE.WebGLRenderer({alpha: true});
+    renderer.setSize( width, height );
+
+    
+    elem.appendChild( renderer.domElement );
+
+    camera.position.z = 5;
+
+    new THREE.TextureLoader().load( 'img/earth.png', sceneGen);
+
+    document.addEventListener('scroll', () => {
+        setScrollRotation();
+    });
+
+}
+
+
+makeGlobe();

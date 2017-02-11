@@ -42,7 +42,7 @@
     "build-sass": "node-sass src/style/main.sass web/style/main.css --source-map web/style/main.css.map",
     "build-postcss": "postcss --use autoprefixer --autoprefixer.browsers '> 5%' --use cssnano -o web/style/main.css web/style/main.css --map web/style/main.css.map",
     "build-css": "npm run build-sass; npm run build-postcss",
-    "build-babel": "babel src -d web --source-maps",
+    "build-babel": "babel src -d web --source-maps --plugins transform-es2015-modules-systemjs",
     "build-html": "ejs-cli --base-dir src/ '*.ejs' --out web/",
     "build-img": "imagemin src/img/* --out-dir=web/img",
     "build-svg": "svgo src/img -o web/img",
@@ -54,12 +54,16 @@
     "start": "npm run build; npm run serve & npm run watch",
     "postinstall": "npm i -g imagemin-cli ejs-cli svgo postcss npm-watch babel cssnano"
   },
-  "os" : [ "darwin", "linux" ],
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "author": "Jørgen Arnor Gårdsø Lom",
   "license": "CC-BY-4.0",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
     "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.22.0",
     "babel-preset-latest": "^6.16.0",
     "babili": "0.0.9",
     "cssnano": "^3.9.1",

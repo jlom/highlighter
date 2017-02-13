@@ -1,8 +1,10 @@
+$categories: ('design': $color-secondary, 'media': $color-tertiary, 'service': false, 'education': $color-grey-scale2)
+
 .about_timeline
     padding: 0
     position: relative
-    
-    figcaption
+
+    .timeline_tooltip
         float: right
         margin: 1rem 0
         min-height: 1rem
@@ -10,10 +12,9 @@
         opacity: 0
         transition: opacity 300ms ease
 
-    &:hover figcaption
+    &:hover .timeline_tooltip
         opacity: 1
 
-        
 .timeline
     margin: 0
 
@@ -38,7 +39,7 @@
 .timeline_item
     fill: #3ea
     height: pxToRem(5)
-    animation: 900ms fadeInLeft 
+    animation: 900ms fadeInLeft
     min-width: 100px
     transition: transform 300ms ease
     transform-origin: center
@@ -56,7 +57,38 @@
 
     &.education
         fill: $color-grey-scale2
-        // fill: $color-positive
 
     &:hover
         transform: scaleY(2) scaleX(1.05)
+
+.timeline_legend
+    position: absolute
+    top: 7rem
+    right: 1rem
+
+    li
+        display: inline-block
+        color: $color-grey-scale2
+        margin-right: 2rem
+
+        &::before
+            content: ''
+            display: inline-block
+            position: relative
+            height: .75rem
+            width: .75rem
+            margin-right: .5rem
+            border-radius: 1rem
+            top: .1rem
+            border-width: pxToRem(1)
+            border-style: solid
+
+        @each $category, $color in $categories
+            @if $color
+                &.#{$category}::before
+                    border-color: $color
+                    background-color: $color
+            @else
+                &.#{$category}::before
+                    border-color: $color-grey-scale3
+                    background: repeating-linear-gradient(-45deg, $color-grey-scale3, $color-grey-scale3 pxToRem(1), transparent pxToRem(2), transparent pxToRem(4))

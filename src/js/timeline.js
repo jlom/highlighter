@@ -33,14 +33,12 @@ function getResume(){
         });
 }
 
-function extractDatesFromCategories() {
+function extractDatesFromResumePoints(resumePoints) {
     let dates = [];
-    for (let i = 0; i < arguments.length; i++) {
-        arguments[i].forEach((d) => {
-            dates.push(new Date(d.startDate));
-            d.endDate ? dates.push(new Date(d.endDate)) : dates.push(new Date());
-        });
-    };
+    resumePoints.forEach((d) => {
+        dates.push(new Date(d.startDate));
+        d.endDate ? dates.push(new Date(d.endDate)) : dates.push(new Date());
+    });
     return dates;
 }
 
@@ -95,21 +93,17 @@ function addTickMarks(chart) {
             .attr('y', '100%')
 }
 
-function generateResumeItems(){
-    let items = [];
-    for (let i = 0; i < arguments.length; i++) {
-        arguments[i].forEach(d => {
-            let company = d.organization || d.institution || d.company || '',
-                position = d.area || d.position || '',
-                startDate = new Date(d.startDate),
-                endDate = d.endDate ? new Date(d.endDate) : false,
-                category = d.studyType ? 'education' : d.category,
-                lane = d.lane ? d.lane : false || d.studyType ? 5 : false || 0;
-
-            items.push({company, position, startDate, endDate, category, lane});
-        });
-    }
-    return items;
+function generateResumeItems(items){
+    return items.map(d => {
+        return {
+            company: d.organization || d.institution || d.company || '',
+            position: d.area || d.position || '',
+            startDate: new Date(d.startDate),
+            endDate: d.endDate ? new Date(d.endDate) : false,
+            category: d.studyType ? 'education' : d.category,
+            lane: d.lane ? d.lane : false || d.studyType ? 5 : false || 0
+        };
+    });
 }
 
 function generateResumeTitle(resumeItem){
@@ -146,7 +140,7 @@ function addResumePoints(chart) {
         .on('mouseover', (item) => {
             let title = generateResumeTitle(item);
             d3.select('.timeline_tooltip')
-                .html(' <strong>' + title.company + ',</strong> ' + title.position + ' (' + title.dateRange + ')');
+                .html('<strong>' + title.company + ',</strong> ' + title.position + ' (' + title.dateRange + ')');
         });
 }
 
@@ -165,7 +159,7 @@ function addLegends(chart){
     let categories = [],
         legends = d3.select('.timeline_legend').append('ul');
 
-    generateResumeCategoryLabels(chart.items).forEach((category, i) => {
+    generateResumeCategoryLabels(chart.items).forEach(category => {
         legends.append('li')
             .attr('class', category)
             .text(category[0].toUpperCase() + category.slice(1));
@@ -176,9 +170,9 @@ export default function(targetElemSelector){
     getResume().then(resume => {
 
         let width = '100%',
-            dates = extractDatesFromCategories(resume.work, resume.education),
+            dates = extractDatesFromResumePoints([...resume.work, ...resume.education]),
             scale = initTimeScale(dates, width),
-            items = generateResumeItems(resume.work, resume.education),
+            items = generateResumeItems([...resume.work, ...resume.education]),
             elem = initChart(targetElemSelector, width),
             chart = { resume, dates, scale, elem, items };
 

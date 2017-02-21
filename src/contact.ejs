@@ -3,12 +3,54 @@
 <h1>Contact</h1>
 
 
-<form>
+<section class="contactinfo" itemscope itemtype="http://schema.org/Person">
+        <strong itemprop="name">
+            <span itemprop="givenName">Jørgen Arnor</span>
+            <span itemprop="additionalName">Gårdsø</span>
+            <span itemprop="familyName">Lom</span>
+        </strong>
+
+        <span itemprop="jobTitle">Digital produktdesigner</span>
+        <a href="tel:+4795529331" itemprop="telephone">95529331</a>
+
+
+
+    <article itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope>
+        <strong itemprop="legalName">Highlighter Lom</strong>
+        <span itemprop="vatID">NO996871193MVA</span>
+
+        <a href="mailto:post@highlighter.no" itemprop="email">post@highlighter.no</a>
+
+        <address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope>
+            <span itemprop="streetAddress">Nøstegaten 85</span><br>
+            <span itemprop="postalCode">5011</span> <span itemprop="addressLocality">Bergen</span><br>
+            <span itemprop="addressCountry">Norge</span>
+        </address>
+    </article>
+</section>
+
+
+<form class="contactform">
+    <h1>Kontakt meg</h1>
     <small class="suggestion"></small>
-    <input class="email_input" name="email" type="email" required>
+    <label for="email">Din epost</label>
+    <input class="email_input" name="email" type="email" placeholder="email@example.com" >
     <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button></button>
+    <button>Send</button>
 </form>
+
+<h2>Ofte stilte spørsmål</h2>
+
+<dl>
+    <dt>Hva koster det?</dt>
+    <dd>
+        <p>Hvor mye har du? Dette virker som et kynisk bilselgertriks, men det kan faktisk være svært nyttig å ha et budsjett i tankene fra starten av, når man har et designprosjekt i tankene.</p>
+        <p>De fleste av mine prosjekter er timebaserte, med en fast timepris. Noen ting, som research, møter og administrasjon er med i alle prosjekt.</p> 
+    </dd>
+
+    <dt>Trenger du folk?</dt>
+    <dd>I utgangspunktet ikke. Jeg har et godt kontaktnett med flinke folk som jeg samarbeider med om ting de er flinke på, som jeg ikke kan. Jeg trenger ikke outsourcing eller rekruttering.</dd>
+</dl>
 
 
 <%- include('templates/footer') %>

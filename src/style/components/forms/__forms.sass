@@ -1,0 +1,25 @@
+label
+    font-weight: 500
+
+input,
+textarea
+    display: block
+    margin: .5rem 0 0
+
+input:not(button),
+textarea
+    width: 100%
+    padding: .5rem
+    font-size: 1rem
+    line-height: 1.5rem
+    border-width: pxToRem(1)
+    border-style: solid
+    border-color: $color-grey-scale3
+    border-radius: pxToRem(3)
+
+    &:invalid:not(:focus)
+        background-color: transparentize($color-primary, .9)
+        border-color: $color-primary
+
+    &:focus
+        border-color: $color-secondary

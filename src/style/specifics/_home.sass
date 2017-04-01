@@ -8,9 +8,15 @@
 
     @supports (clip-path: $sheet)
         clip-path: $sheet
-        min-height: calc(100vh + 3rem)
         padding-bottom: 5rem
-    
+
+    @include media(small)
+        min-height: auto
+        @supports (clip-path: $sheet)
+            clip-path: none
+            padding-bottom: 0
+
+
 .mainhead_slug
     position: absolute
     z-index: z(header)
@@ -24,10 +30,13 @@
     text-align: center
 
     @include media(small)
-        font-size: 5vmin
-        padding: 14rem 1rem 0
+        font-size: 6vmin
+        padding: 2rem 1rem 0
         text-shadow: 0 0 1rem transparentize($color-positive, .5)
- 
+        top: 20rem
+        transform: translateY(-50%)
+        height: auto
+
 .borealis_background
     position: absolute
     top: 1rem
@@ -38,15 +47,14 @@
     overflow: visible
 
     @include media(small)
-        width: 100vmin
-        height: 100vmin
+        width: 100vw
         left: 0
+        top: -20rem
 
 .mainhead_whatIDo
     display: flex
     width: 80vw
-    margin: 0 auto
-    padding-top: 40rem
+    margin: 40rem auto 0
     justify-content: space-around
 
     li
@@ -58,3 +66,59 @@
 
     @include media(small)
         display: block
+        background: $color-negative
+        color: $color-positive
+        width: 100vw
+        margin: 30rem 0 0 -10vw
+        padding: 4rem 15vw 4rem 10vw
+        clip-path: polygon(0 0, 100% 3vmin, 100% 100%, 0 100%)
+
+        @media (pointer:coarse)
+            overflow-x: scroll
+            overflow-y: visible
+            position: relative
+            height: 30rem
+            padding: 5rem 15vw 4rem 10vw
+            scroll-snap-type: mandatory
+            scroll-snap-points-x: repeat(85vw)
+
+            li
+                display: block
+                position: absolute
+                max-width: none
+                width: 85vw
+                padding: 0 0 0 10vw
+                top: 3rem
+
+                &:last-of-type
+                    width: 100vw
+                    padding: 0 10vw 0 15vw
+
+
+            @for $n from 1 through 3
+                li:nth-of-type(#{$n})
+                    left: #{($n - 1) * 85}vw
+
+.maindesc
+    &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: calc(100vh - 3vh)
+        left: 0
+        height: 5rem
+        width: 50rem
+
+        @supports (clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%))
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%)
+            background-color: $color-primary
+
+        @include media(small)
+            top: 40rem
+            width: 100vw
+            height: 5vmin
+            z-index: #{z(base) + 1}
+
+            @supports (clip-path: polygon(0 0,50% 1.5vmin, 50% 1.5vmin, 0 50%))
+                clip-path: polygon(0 0,50% 1.5vmin, 50% 1.5vmin, 0 100%)
+

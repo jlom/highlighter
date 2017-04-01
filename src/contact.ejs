@@ -1,56 +1,88 @@
 <%- include('templates/header') %>
 
-<h1>Contact</h1>
+<header class="contact_header">
 
-
-<section class="contactinfo" itemscope itemtype="http://schema.org/Person">
-        <strong itemprop="name">
-            <span itemprop="givenName">Jørgen Arnor</span>
-            <span itemprop="additionalName">Gårdsø</span>
-            <span itemprop="familyName">Lom</span>
-        </strong>
-
-        <span itemprop="jobTitle">Digital produktdesigner</span>
-        <a href="tel:+4795529331" itemprop="telephone">95529331</a>
-
-
-
-    <article itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope>
-        <strong itemprop="legalName">Highlighter Lom</strong>
-        <span itemprop="vatID">NO996871193MVA</span>
-
-        <a href="mailto:post@highlighter.no" itemprop="email">post@highlighter.no</a>
-
-        <address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope>
-            <span itemprop="streetAddress">Nøstegaten 85</span><br>
-            <span itemprop="postalCode">5011</span> <span itemprop="addressLocality">Bergen</span><br>
-            <span itemprop="addressCountry">Norge</span>
-        </address>
-    </article>
-</section>
+</header>
 
 
 <form class="contactform">
     <h1>Kontakt meg</h1>
     <small class="suggestion"></small>
     <label for="email">Din epost</label>
-    <input class="email_input" name="email" type="email" placeholder="email@example.com" >
+    <input id="email" class="email_input" name="email" type="email" placeholder="email@example.com" >
+
+    <div class="select">
+        <select id="contacttype">
+            <option value="0">Jeg vil si hei</option>
+            <option value="1">Jeg vil forhøre meg om et prosjekt</option>
+        </select>
+    </div>
+
     <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button>Send</button>
+    <button id="contactform-send">Send</button>
 </form>
 
-<h2>Ofte stilte spørsmål</h2>
 
-<dl>
-    <dt>Hva koster det?</dt>
-    <dd>
-        <p>Hvor mye har du? Dette virker som et kynisk bilselgertriks, men det kan faktisk være svært nyttig å ha et budsjett i tankene fra starten av, når man har et designprosjekt i tankene.</p>
-        <p>De fleste av mine prosjekter er timebaserte, med en fast timepris. Noen ting, som research, møter og administrasjon er med i alle prosjekt.</p> 
-    </dd>
 
-    <dt>Trenger du folk?</dt>
-    <dd>I utgangspunktet ikke. Jeg har et godt kontaktnett med flinke folk som jeg samarbeider med om ting de er flinke på, som jeg ikke kan. Jeg trenger ikke outsourcing eller rekruttering.</dd>
-</dl>
+
+<section class="contactinfo" itemscope itemtype="http://schema.org/Person">
+
+    <article>
+        <strong itemprop="name">
+            <span itemprop="givenName">Jørgen Arnor</span>
+            <span itemprop="additionalName">Gårdsø</span>
+            <span itemprop="familyName">Lom</span>
+        </strong> <br>
+
+        <span itemprop="jobTitle">Digital produktdesigner</span><br>
+        <a href="tel:+4795529331" itemprop="telephone">+47&thinsp;955&thinsp;29&thinsp;331</a><br>
+        <a href="mailto:post@highlighter.no" itemprop="email">j@lom.me</a>
+    </article>
+
+
+    <article itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope>
+        <strong itemprop="legalName">Highlighter Lom</strong><br>
+        <span itemprop="vatID">NO&nbsp;996&thinsp;871&thinsp;193&nbsp;MVA</span><br>
+
+
+        <address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope>
+            <span itemprop="streetAddress">Nøstegaten 85</span><br>
+            <span itemprop="postalCode">5011</span> <span itemprop="addressLocality">Bergen</span>,
+            <span itemprop="addressCountry">Norge</span>
+        </address>
+    </article>
+
+    <article>
+        <br>
+        Kontonr. 9484.06.14799 <br>
+        Handelsbanken Tromsø <br>
+        IBAN NO8994840614799
+</section>
+
+<section class="elsewhere">
+    <article class="pgp">
+        <h2>PGP Fingerprint</h2>
+        <code>
+            4FC9&nbsp;6F18&nbsp;F37E&nbsp;336B&nbsp;B7B8
+            5EC3&nbsp;5236&nbsp;E135&nbsp;B20B&nbsp;0E05
+        </code>
+        <a href="https://keybase.io/lom/key.asc">Download my PGP key</a>
+    </article>
+
+    <h2>Ofte stilte spørsmål</h2>
+
+    <dl>
+        <dt>Hva koster det?</dt>
+        <dd>
+            <p>Hvor mye har du? Dette virker som et kynisk bilselgertriks, men det kan faktisk være svært nyttig å ha et budsjett i tankene fra starten av, når man har et designprosjekt i tankene.</p>
+            <p>De fleste av mine prosjekter er timebaserte, med en fast timepris. Noen ting, som research, møter og administrasjon er med i alle prosjekt.</p>
+        </dd>
+
+        <dt>Trenger du folk?</dt>
+        <dd>I utgangspunktet ikke. Jeg har et godt kontaktnett med flinke folk som jeg samarbeider med om ting de er flinke på, som jeg ikke kan. Jeg trenger ikke outsourcing eller rekruttering.</dd>
+    </dl>
+</section>
+
 
 
 <%- include('templates/footer') %>

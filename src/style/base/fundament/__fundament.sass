@@ -1,0 +1,13 @@
+html
+    -webkit-overflow-scrolling: touch
+    -webkit-tap-highlight-color: $color-secondary-dark
+    -webkit-text-size-adjust: none
+
+body
+    // Because h*cking Safari doesn't include scrollbars in 100vw.
+    overflow-x: hidden
+
+::selection
+    background: $color-secondary-dark
+    color: $color-negative
+    text-shadow: none

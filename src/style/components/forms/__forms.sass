@@ -1,5 +1,48 @@
 label
     font-weight: 500
+    display: inline-block
+
+    &:first-of-type
+        margin-top: 2rem
+
+%select
+    width: 100%
+
+.select > select
+    @extend %select
+    background: transparent
+    -webkit-appearance: none
+    border: 0
+    padding: .5rem
+    font-size: 1rem
+    border: pxToRem(1) solid $color-grey-scale3
+    border-radius: pxToRem(3)
+
+    &:focus
+        border-color: $color-secondary
+
+.select
+    @extend %select
+    margin-top: .5rem
+    position: relative
+
+    &::after
+        content: ''
+        display: block
+        top: .7rem
+        right: 1.5rem
+        height: .6rem
+        width: .6rem
+        border: pxToRem(2) solid $color-grey-scale2
+        border-top-style: none
+        border-left-style: none
+        position: absolute
+        transform-origin: bottom right
+        border-radius: pxToRem(2)
+        transform: rotate(45deg)
+
+textarea
+    resize: vertical
 
 input,
 textarea
@@ -23,3 +66,57 @@ textarea
 
     &:focus
         border-color: $color-secondary
+
+.segmented
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 1rem
+
+    label:not([for])
+        flex-basis: 100%
+
+    input[type=radio]
+        display: none
+
+        & + label[for]
+            display: inline-block
+            background: $color-negative
+            color: $color-secondary-dark
+            flex-basis: 25%
+            font-weight: normal
+            border: pxToRem(1) solid $color-secondary
+            border-right-style: none
+            text-align: center
+            padding: .5rem
+            margin: .5rem 0
+
+            &:nth-of-type(2)
+                border-radius: pxToRem(3) 0 0 pxToRem(3)
+
+            &:last-of-type
+                border-radius: 0 pxToRem(5) pxToRem(5) 0
+                border-right-style: solid
+
+        &:checked + label
+            background: $color-secondary
+            color: $color-negative
+            font-weight: 500
+
+button,
+input[type=button]
+    display: inline-block
+    font-size: 1rem
+    text-align: center
+    background: $color-secondary-darker
+    border-radius: pxToRem(3)
+    color: $color-negative
+    line-height: 3rem
+    width: 100%
+    border: none
+    margin: .5rem 0
+    transition: background 300ms ease
+    cursor: pointer
+
+    &:hover,
+    &:focus
+        background: $color-primary

@@ -40,3 +40,14 @@ $navbar-height: 3rem
     a:focus,
     a:active
         border-bottom: pxToRem(2) solid $color-negative
+
+    @include media(small)
+        .logo
+            width: 3rem
+
+        li
+            font-size: .9rem
+            margin-left: 1.5rem
+
+        li:first-of-type
+            display: none

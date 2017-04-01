@@ -3,15 +3,18 @@
 
 .about_header
     @include headers()
-    padding-bottom: 7vmincd 
+    padding-bottom: 7vmin
+    @include media(small)
+        padding-top: 4rem
 
     p
         margin-left: 20rem
         max-width: 35rem
+        @include media(small)
+            margin-left: 0
 
 .about_cv h2
-    @extend %hideText 
-    // margin-left: 10vw
+    @extend %hideText
 
 .about_resume
     width: calc(80vw - 30rem)
@@ -25,6 +28,9 @@
     width: 40rem
     margin: 0 0 0 20rem
     position: relative
+    @include media(small)
+        margin: 0
+        width: 80vw
 
     h3
         margin-bottom: 0
@@ -60,7 +66,7 @@
             object-fit: contain
             object-position: top center
 
-    aside 
+    aside
         @media only screen and (min-width: 150em)
             strong, time
                 position: relative
@@ -80,6 +86,8 @@
     position: relative
     background: $color-grey-scale4
     padding: 0 2rem
+    @include media(small)
+        display: none
 
     &::before
         display: block
@@ -150,7 +158,9 @@
 .about_image
     position: absolute
     right: 13.5vw
-    top: 12rem 
+    top: 12rem
     width: 25rem
     z-index: z(header)
-    box-shadow: 0 0 5rem transparentize($color-positive, .5) 
+    box-shadow: 0 0 5rem transparentize($color-positive, .5)
+    @include media(small)
+        display: none

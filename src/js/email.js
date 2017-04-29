@@ -1,4 +1,6 @@
-export default function contactform(selector){
+export default function emailValidator(selector){
+
+    if (!selector) return;
 
     const domains = [
             'lom.me', 'highlighter.no', 'unimicro.no', 'schibsted.com', 'schibsted.no', 'netliferesearch.no', 'statoil.com', 'telenor.no', 'apple.com', 'bt.no', 'tv2.no', 'nrk.no', 'hotmail.com','gmail.com','online.no','live.no','yahoo.no','yahoo.com','hotmail.no','c2i.net','broadpark.no','frisurf.no','start.no','msn.com','lyse.net','getmail.no','chello.no','live.com','me.com','tele2.no','wp.pl','bluezone.no','outlook.com','netcom.no','stud.ntnu.no','sensewave.com','tiscali.no','spray.no','bbnett.no','ntebb.no','epost.no','statoil.com','live.se','telia.com','mac.com','icloud.com','ebnett.no','haugnett.no','mail.ru','losmail.no','mimer.no','telenor.com','mail.com','adsl.no','o2.pl','yahoo.co.uk','inbox.lv','hjemme.no','halden.net','vikenfiber.no','gmail.no','student.uib.no','ymail.com','hydro.com','sf-nett.no','aol.com','interia.pl','web.de','loqal.no','yahoo.se'
@@ -40,7 +42,7 @@ export default function contactform(selector){
         }).filter(_suggestion => {
             return _suggestion.errors <= allowance;
         })[0];
-        
+
         return suggestion ? suggestion.suggestion : false;
     }
 

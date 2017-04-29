@@ -48,11 +48,7 @@ function getScrollRotation(targetElem, offset) {
     let elemtop = targetElem.getBoundingClientRect().top,
         initialOffset = offset !== undefined ? offset : 4.2;
 
-    if (elemtop >= 0 && elemtop <= window.innerHeight) {
-        return initialOffset + (elemtop / 1000);
-    } else {
-        return initialOffset;
-    }
+    return initialOffset + (elemtop / 1000);
 }
 
 export default function makeGlobe(targetElemSelecector) {

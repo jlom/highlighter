@@ -30,16 +30,16 @@ $navbar-height: 3rem
     li
         margin-left: 3rem
 
+    a:not(.logo)
+        &:link,
+        &:visited
+            color: $color-negative
+            text-decoration: none
 
-    a:link,
-    a:visited
-        color: $color-negative
-        text-decoration: none
-
-    a:hover,
-    a:focus,
-    a:active
-        border-bottom: pxToRem(2) solid $color-negative
+        &:hover,
+        &:focus,
+        &:active
+            border-bottom: pxToRem(2) solid $color-negative
 
     @include media(small)
         .logo

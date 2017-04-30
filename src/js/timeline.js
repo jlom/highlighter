@@ -1,5 +1,7 @@
 function initChart(targetElemSelector, width){
         let chart = d3.select(targetElemSelector)
+            .append('article')
+            .attr('class', 'timeline_scroller')
             .append('svg')
             .attr('width', width)
             .attr('class', 'timeline_chart');
@@ -166,6 +168,11 @@ function addLegends(chart){
     });
 }
 
+function scrollLeft(selector){
+    let scroller = document.querySelectorAll(selector)[0];
+    scroller.scrollLeft = scroller.scrollWidth;
+}
+
 export default function(targetElemSelector){
     getResume().then(resume => {
 
@@ -179,6 +186,7 @@ export default function(targetElemSelector){
         addTickMarks(chart);
         addLegends(chart);
         addResumePoints(chart);
+        scrollLeft('.timeline_scroller');
 
     }).catch(console.error);
 }

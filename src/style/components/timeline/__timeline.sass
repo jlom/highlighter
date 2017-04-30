@@ -1,7 +1,7 @@
 $categories: ('design': $color-secondary, 'media': $color-tertiary, 'service': false, 'education': $color-grey-scale2)
 
 .about_timeline
-    padding: 0
+    padding: 3rem
     position: relative
 
     .timeline_tooltip
@@ -18,9 +18,17 @@ $categories: ('design': $color-secondary, 'media': $color-tertiary, 'service': f
 .timeline
     margin: 0
 
+.timeline_scroller
+    margin: 0 -3rem
+    overflow-x: auto
+    height: pxToRem(125)
+    width: calc(100% + 6rem)
+
 .timeline_chart
     height: pxToRem(115)
     overflow: visible
+    min-width: 90rem
+    padding: 0 3rem
 
 #diagonalHatch
     path
@@ -65,6 +73,12 @@ $categories: ('design': $color-secondary, 'media': $color-tertiary, 'service': f
     position: absolute
     top: 7rem
     right: 1rem
+
+    @include media(small)
+        position: static
+        display: inline-block
+        margin: 1rem 0
+        line-height: 2rem
 
     li
         display: inline-block

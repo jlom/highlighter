@@ -1,6 +1,7 @@
 export default function contactform(selector){
 
-    const typeInput = document.querySelector(selector),
+    const typeInput = document.querySelector(selector + ' #contacttype'),
+
         projectHTML = `
             <fieldset id="project" class="contactform_project">
                 <label>Budsjett (circa)</label>
@@ -25,11 +26,15 @@ export default function contactform(selector){
 
     typeInput.addEventListener('change', (e) => {
         if(e.target.value == 1){
-            document.getElementById('contactform-send').insertAdjacentHTML('beforebegin', projectHTML);
-            let range = document.getElementById('range');
+
+            document.getElementById('contactform-send')
+                .insertAdjacentHTML('beforebegin', projectHTML);
+
+            const element = document.getElementById('project');
+            const range = document.getElementById('range');
 
             noUiSlider.create(range, {
-                start: [25000, 50000],
+                start: [40000, 75000],
                 connect: true,
                 range: {
                     'min': [ 10000 ],
@@ -53,8 +58,23 @@ export default function contactform(selector){
                     }
                 }
             });
+
+            let prev = element.clientHeight;
+            element.style.maxHeight = 0;
+            element.style.opacity = 0;
+            window.setTimeout(()=>{
+                element.style.opacity = 1;
+                element.style.maxHeight = prev + 'px';
+            }, 10);
+
         }else{
-            document.getElementById('project').remove();
+            const element = document.getElementById('project');
+            element.style.maxHeight = 0;
+            element.style.opacity = 0;
+            element.style.transform = 'scaleY(0)';
+            window.setTimeout(() => {
+                element.remove();
+            }, 1000)
         }
     });
 

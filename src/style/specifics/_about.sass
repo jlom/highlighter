@@ -5,7 +5,7 @@
     @include headers()
     padding-bottom: 7vmin
     @include media(small)
-        padding-top: 4rem
+        padding: 5rem 10vw 10rem
 
     p
         margin-left: 20rem
@@ -19,9 +19,10 @@
 .about_resume
     width: calc(80vw - 30rem)
     margin-left: 10vw
+    @include media(small)
+        margin: -3rem 0 0
 
 .about_timeline
-    padding: 3rem
     margin: 12rem 0 5rem
 
 .about_resume li
@@ -29,8 +30,8 @@
     margin: 0 0 0 20rem
     position: relative
     @include media(small)
-        margin: 0
-        width: 80vw
+        margin: 0 0 7rem calc(5vw + 7rem)
+        width: calc(90vw - 7em)
 
     h3
         margin-bottom: 0
@@ -45,6 +46,9 @@
 
     time
         font-weight: 100
+        line-height: 2rem
+        @include media(small)
+            display: block
 
     p
         @media only screen and (min-width: 150em)
@@ -66,6 +70,10 @@
             object-fit: contain
             object-position: top center
 
+        @media only screen and (max-width: 150em)
+            left: -7rem
+            object-position: center center
+
     aside
         @media only screen and (min-width: 150em)
             strong, time
@@ -75,6 +83,10 @@
         img
             height: 3rem
             top: 0
+
+        @include media(small)
+            time
+                display: inline-block
 
 .about_location
     float: right
@@ -163,4 +175,7 @@
     z-index: z(header)
     box-shadow: 0 0 5rem transparentize($color-positive, .5)
     @include media(small)
-        display: none
+        position: relative
+        width: 13rem
+        left: calc(50% - 6.5rem)
+        top: -5rem

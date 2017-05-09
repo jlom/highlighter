@@ -30,12 +30,6 @@
         "src/img"
       ],
       "extensions": "jpg,jpeg,png,gif,ico"
-    },
-    "build-svg": {
-      "patterns": [
-        "src/img"
-      ],
-      "extensions": "svg"
     }
   },
   "scripts": {
@@ -45,9 +39,8 @@
     "build-babel": "babel src -d web --source-maps --plugins transform-es2015-modules-systemjs",
     "build-html": "ejs-cli --base-dir src/ '*.ejs' --out web/",
     "build-img": "imagemin src/img/* --out-dir=web/img",
-    "build-svg": "svgo src/img -o web/img",
     "build-txt": "find src/ \\( -name '*.txt' \\) -exec cp {} web/ \\;",
-    "build": "npm run clean; npm run build-babel & npm run build-html & npm run build-img & npm run build-svg & npm run build-txt && npm run build-sass && npm run build-postcss",
+    "build": "npm run clean; npm run build-babel & npm run build-html & npm run build-img & npm run build-txt && npm run build-sass && npm run build-postcss",
     "serve": "live-server web --watch --wait --browser='Google Chrome Canary'",
     "clean": "rm -rf web; mkdir -p web/img",
     "watch": "npm-watch",
@@ -65,14 +58,13 @@
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-es2015-modules-systemjs": "^6.22.0",
     "babel-preset-latest": "^6.16.0",
-    "babili": "0.0.9",
+    "babili": "^0.0.9",
     "cssnano": "^3.9.1",
     "ejs-cli": "^2.0.0",
     "lite-server": "^2.2.2",
     "node-sass": "^3.13.0",
     "npm-watch": "^0.1.6",
-    "postcss-cli": "^2.6.0",
-    "svgo": "^0.7.1"
+    "postcss-cli": "^2.6.0"
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.7"

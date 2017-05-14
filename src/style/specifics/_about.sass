@@ -11,7 +11,7 @@
         margin-left: 20rem
         max-width: 35rem
         @include media(small)
-            margin-left: 0
+            margin: 0 auto
 
 .about_cv h2
     @extend %hideText
@@ -98,7 +98,7 @@
     position: relative
     background: $color-grey-scale4
     padding: 0 2rem
-    @include media(small)
+    @media only screen and (max-width: 90em)
         display: none
 
     &::before
@@ -170,12 +170,13 @@
 .about_image
     position: absolute
     right: 13.5vw
-    top: 12rem
+    bottom: calc(100vh - 37rem)
     width: 25rem
+    max-width: calc(100vw - 13.5vw - 66rem)
     z-index: z(header)
     box-shadow: 0 0 5rem transparentize($color-positive, .5)
     @include media(small)
         position: relative
-        width: 13rem
         left: calc(50% - 6.5rem)
         top: -5rem
+        max-width: 13rem

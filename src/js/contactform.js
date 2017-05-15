@@ -110,8 +110,13 @@ export default function contactform(selector){
                 },
                 body: JSON.stringify(formData)
             }).then(d => {
-                form.setAttribute('aria-busy', 'false');
-                form.classList.add('sent');
+                if(d.status === 200){
+                    form.setAttribute('aria-busy', 'false');
+                    form.classList.add('sent');
+                }else{
+                    form.setAttribute('aria-busy', 'false');
+                    form.classList.add('failed');
+                }
             }).catch(err => {
                 form.setAttribute('aria-busy', 'false');
                 form.classList.add('failed');

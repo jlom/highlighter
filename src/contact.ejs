@@ -7,19 +7,23 @@
 
 <form class="contactform">
     <h1>Kontakt meg</h1>
+
     <small class="suggestion"></small>
     <label for="email">Din epost</label>
-    <input id="email" class="email_input" name="email" type="email" placeholder="email@example.com" >
+    <input id="email" class="email_input" name="email" type="email" placeholder="email@example.com" />
 
     <div class="select">
-        <select id="contacttype">
+        <select id="contacttype" name="type">
             <option value="0">Jeg vil si hei</option>
-            <option value="1">Jeg vil forhøre meg om et prosjekt</option>
+            <option value="1">Jeg har et prosjekt</option>
         </select>
     </div>
 
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button id="contactform-send">Send</button>
+    <textarea name="text" id="" cols="30" rows="10"></textarea>
+
+    <input type="text" name="name" class="hpot"/>
+
+    <button type="submit" id="contactform-send">Send</button>
 </form>
 
 
@@ -57,17 +61,19 @@
         Kontonr. 9484.06.14799 <br>
         Handelsbanken Tromsø <br>
         IBAN NO8994840614799
-</section>
-
-<section class="elsewhere">
-    <article class="pgp">
-        <h2>PGP Fingerprint</h2>
-        <code>
-            4FC9&nbsp;6F18&nbsp;F37E&nbsp;336B&nbsp;B7B8
-            5EC3&nbsp;5236&nbsp;E135&nbsp;B20B&nbsp;0E05
-        </code>
-        <a href="https://keybase.io/lom/key.asc">Download my PGP key</a>
     </article>
+
+    <div>
+        <article class="pgp">
+            <h2>PGP Fingerprint</h2>
+            <code>
+                4FC9&nbsp;6F18&nbsp;F37E&nbsp;336B&nbsp;B7B8
+                5EC3&nbsp;5236&nbsp;E135&nbsp;B20B&nbsp;0E05
+            </code>
+            <a href="https://keybase.io/lom/key.asc">Download my PGP key</a>
+        </article>
+    </div>
+
 </section>
 
 

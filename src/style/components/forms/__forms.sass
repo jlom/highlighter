@@ -67,6 +67,10 @@ textarea
     &:focus
         border-color: $color-secondary
 
+// 🍯
+.hpot
+    display: none
+
 .segmented
     display: flex
     flex-wrap: wrap
@@ -120,3 +124,11 @@ input[type=button]
     &:hover,
     &:focus
         background: $color-primary
+
+// To prevent zooming when entering an input field on iOS
+@media screen and (-webkit-min-device-pixel-ratio:0)
+    select,
+    .select > select,
+    textarea,
+    input:not(button)
+        font-size: 16px

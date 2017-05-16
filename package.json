@@ -34,7 +34,7 @@
   },
   "scripts": {
     "build-sass": "node-sass src/style/main.sass web/style/main.css --source-map web/style/main.css.map",
-    "build-postcss": "postcss --use autoprefixer --autoprefixer.browsers '> 5%' --use cssnano -o web/style/main.css web/style/main.css --map web/style/main.css.map",
+    "build-postcss": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --use cssnano -o web/style/main.css web/style/main.css --map web/style/main.css.map",
     "build-css": "npm run build-sass; npm run build-postcss",
     "build-babel": "babel src -d web --source-maps --plugins transform-es2015-modules-systemjs",
     "build-html": "ejs-cli --base-dir src/ '*.ejs' --out web/",

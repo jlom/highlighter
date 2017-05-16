@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="818px" height="818px" viewBox="0 0 818 818" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" fill="#000000">
+            <polyline id="triangle4" points="409 613.3125 817.625 817.625 817.625 409"></polyline>
+            <polyline id="triangle3" points="408.625 613.3125 0 817.625 0 409"></polyline>
+            <polyline id="triangle2" points="409 204.3125 817.625 408.625 817.625 0"></polyline>
+            <polyline id="triangle1" points="408.625 204.3125 0 408.625 0 0"></polyline>
+            <polygon id="H" points="487 499 487 320 449.430622 320 449.430622 392.195426 368.569378 392.195426 368.569378 320 331 320 331 499 368.569378 499 368.569378 424.199584 449.430622 424.199584 449.430622 499"></polygon>
+        </g>
+    </g>
+</svg>
